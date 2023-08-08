@@ -1,0 +1,22 @@
+# init cotainer will failed with exit non zero and main container will not start
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: alpine
+spec:
+  containers:
+  - name: alpine1
+    image: alpine
+    command:
+    - sleep
+    - "1d"
+  initContainers:
+  - name: alpine2
+    image: alpine
+    command:
+    - sleep
+    - "15s"
+    - "&&"
+    - exit
+    - "104"

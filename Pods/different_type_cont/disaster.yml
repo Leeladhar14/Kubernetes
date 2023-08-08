@@ -1,0 +1,16 @@
+# init cotainer will not be completed it will be initialize mode only and main container will start
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: initexp
+spec:
+  containers:
+  - name: alpine
+    image: alpine1
+    command:
+    - sleep
+    - "1d"
+  initContainers:
+  - name: jenkins2
+    image: jenkins/jenkins
