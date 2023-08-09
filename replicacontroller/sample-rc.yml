@@ -15,5 +15,5 @@ spec:
         tier: backend
     spec:
       containers:
-        name: nginx
+      - name: nginx
         image: nginx
