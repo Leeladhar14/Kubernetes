@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: sam-test
+spec:
+  minReadySeconds: 1
+  replicas: 3
+  selector: 
+    matchLabels:
+      tier: frontend
+  template:
+    metadata: 
+      labels: 
+        tier: frontend
+      name: test-rs-test
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
