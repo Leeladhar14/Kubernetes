@@ -8,11 +8,11 @@ spec:
   replicas: 3
   selector: 
     matchLabels:
-      tyre: frontend
+      tire: frontend
   template:
     metadata: 
       labels: 
-        tyre: frontend
+        tire: frontend
       name: test-rc
     spec:
       containers:
