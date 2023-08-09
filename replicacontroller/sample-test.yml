@@ -12,7 +12,7 @@ spec:
     metadata:
       name: nginx
       labels:
-        tier: end
+        tier: backend
     spec:
       containers:
       - name: nginx
